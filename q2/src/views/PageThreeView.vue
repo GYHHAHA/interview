@@ -5,18 +5,18 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute  } from 'vue-router'
+import { onMounted, onUpdated } from 'vue';
 const $route = useRoute()
-const $router = useRouter()
-beforeRouteEnter (to, from, next) {
-  if (parseInt(to.params.id) > 0 && parseInt(to.params.id) < 11) {
-    next()
-  } else {
-    setTimeout(() => {
-      $router.push({ name: 'PageFour' })
-    }, 3000);
-  }
-}
+
+onMounted(() => {
+  sessionStorage.removeItem('navigated')
+})
+
+onUpdated(() => {
+  sessionStorage.removeItem('navigated')
+})
+
 </script>
 
 <style scoped>
