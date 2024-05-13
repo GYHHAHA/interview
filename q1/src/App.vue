@@ -1,3 +1,9 @@
 <template>
-  <div>Question 1</div>
+  <div>
+    <Tab />
+  </div>
 </template>
+<script lang="ts" setup>
+import Tab from './pages/tab.vue';
+</script>
+<style lang="less"></style>
