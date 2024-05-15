@@ -1,29 +1,25 @@
 <template>
-    <ul class="tree-view">
-      <TreeNode 
-        v-for="(node, index) in nodes" 
-        :key="index" 
-        :node="node" 
-        :level="0" 
-      />
-    </ul>
-  </template>
-  
-  <script setup lang="ts">
-  import TreeNode from './TreeNode.vue';
-  
-  const props = defineProps({
-    nodes: {
-      type: Array as PropType<TreeNode[]>,
-      required: true
-    }
-  });
-  </script>
-  
-  <style scoped>
-  .tree-view {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
+  <ul class="tree-view">
+    <TreeNode :node="rootNode" :level="0" />
+  </ul>
+</template>
+
+<script setup lang="ts">
+import { PropType, defineProps } from 'vue';
+import TreeNode from './TreeNode.vue';
+
+const props = defineProps({
+  rootNode: {
+    type: Object as PropType<TreeNode>,
+    required: true
   }
-  </style>
+});
+</script>
+
+<style scoped>
+.tree-view {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+</style>

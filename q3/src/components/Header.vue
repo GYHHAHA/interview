@@ -1,14 +1,15 @@
 <template>
-    <header class="header">
-      <h1>My App</h1>
-      <button @click="$router.push('/page2')">Go to Page 2</button>
-    </header>
-  </template>
-  
-  <script setup>
-  import { useRouter } from 'vue-router';
-  </script>
-  
-  <style scoped>
-  .header { /* ...your styles... */ }
-  </style>
+  <header class="header">
+    <h1>My Pages</h1>
+  </header>
+</template>
+
+<style scoped>
+.header {
+  width: 100%;
+  background-color: lightblue;
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 60px;
+}
+</style>

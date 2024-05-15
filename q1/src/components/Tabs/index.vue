@@ -4,7 +4,7 @@
             <div v-for="(tab, index) in tabs" :key="index" class="tab" :class="{ 'active': currentTabIndex === index }"
                 @click="switchTab(index)" @mouseover="hoveredIndex = index" @mouseout="hoveredIndex = -1">
                 {{ tab.name }}
-                <span v-show="hoveredIndex === index" class="close" @click="removeTab(index)">×</span>
+                <span v-show="hoveredIndex === index" class="close" @click.stop="removeTab(index)">×</span>
             </div>
             <div class="add-tab" @click="addTab">+</div>
         </div>
@@ -72,7 +72,6 @@ const removeTab = (index) => {
 }
 
 .add-tab {
-    float: right;
     cursor: pointer;
     padding: 5px 10px;
     border: 1px solid #ccc;

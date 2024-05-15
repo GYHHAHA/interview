@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Tree Component Example</h1>
-    <Tree :nodes="treeData" />
+    <Tree :rootNode="treeData" />
   </div>
 </template>
 

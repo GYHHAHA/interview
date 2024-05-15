@@ -127,3 +127,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* 允许页面内容在需要时滚动 */
+}
